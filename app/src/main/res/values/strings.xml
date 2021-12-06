@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">2SLAM_2021_P2_EQ5</string>
+    <string name="textViewNom">textViewNom</string>
+    <string name="textViewVille">textViewVille</string>
 </resources>
