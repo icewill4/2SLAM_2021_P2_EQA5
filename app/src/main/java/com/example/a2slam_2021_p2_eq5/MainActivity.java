@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -30,12 +31,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //on définit une collection de caractéristiques d'un resto
-        ArrayList<Resto> lesRestos = new ArrayList<Resto>();
+        ArrayList<DetailResto> lesRestos = new ArrayList<DetailResto>();
 
         //on définit un objet ListView
         ListView listViewRestos;
         //on associe l'objet au widget
-        listViewRestos = findViewById(R.id.listViewRestaurant);
+        listViewRestos = findViewById(R.id.listView);
 
         //creation de la requete http sur le serveur local, cela necessite
         OkHttpClient httpclient = new OkHttpClient();
@@ -76,13 +77,15 @@ public class MainActivity extends AppCompatActivity {
                                 String email = jsonObject.getString("email");
                                 String adresse = jsonObject.getString("adressecli");
                                 String tel = jsonObject.getString("telcli");
+                                // TO DO
                                 Log.i("clients", numcli + " " + nomPrenom + "  " + email + " " + adresse + " " + tel); //message qui apparait dans la console pour vérifier
-                                Resto c = new Resto(nomPrenom, email, adresse, tel);
+                                //TO DO
+                                DetailResto c = new DetailResto(nomPrenom, email, adresse, tel);
                                 //on ajoute le client à la collection lesClients
                                 lesRestos.add(c);
                             }
                             //on affecte cette liste d'objet clients dans la listeview pour l'afficher
-                            ArrayAdapter<Resto> dataAdapter = new ArrayAdapter<Resto>(MainActivity.this, android.R.layout.simple_list_item_1, lesRestos);
+                            ArrayAdapter<DetailResto> dataAdapter = new ArrayAdapter<DetailResto>(MainActivity.this, android.R.layout.simple_list_item_1, lesRestos);
                             listViewRestos.setAdapter(dataAdapter);
 
                         } catch (final JSONException e) {
@@ -103,15 +106,15 @@ public class MainActivity extends AppCompatActivity {
 
         //on sélectionne un client de la liste et l'on passe son id à l'activity AfficheUnClient
 
-        listViewRestos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//        listViewRestos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-
-                Toast.makeText(getApplicationContext(), "id selectionné : " + String.valueOf(id), Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(MainActivity.this, AfficheUnRestoActivity.class);
-                intent.putExtra("IDCLI", id);
-                startActivity(intent);
-            }
+//            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+//
+//                Toast.makeText(getApplicationContext(), "id selectionné : " + String.valueOf(id), Toast.LENGTH_LONG).show();
+//                Intent intent = new Intent(MainActivity.this, AfficheUnRestoActivity.class);
+//                intent.putExtra("IDCLI", id);
+//                startActivity(intent);
+//            }
         });
     }
 
