@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/lucie/AndroidStudioProjects/2SLAM_2021_P2_EQA5/app/src/main/res/layout/activity_detailresto.xml" value="0.4" />
-        <entry key="..\:/Users/lucie/AndroidStudioProjects/2SLAM_2021_P2_EQA5/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/Cours/2eme annee/AP/Projet Android reservation/2SLAM_2021_P2_EQ5/app/src/main/res/drawable/ic_launcher_background.xml" value="0.26614583333333336" />
+        <entry key="..\:/Cours/2eme annee/AP/Projet Android reservation/2SLAM_2021_P2_EQ5/app/src/main/res/layout/activity_detailresto.xml" value="0.25" />
+        <entry key="..\:/Cours/2eme annee/AP/Projet Android reservation/2SLAM_2021_P2_EQ5/app/src/main/res/layout/activity_listeresto.xml" value="0.25" />
+        <entry key="..\:/Cours/2eme annee/AP/Projet Android reservation/2SLAM_2021_P2_EQ5/app/src/main/res/layout/activity_listview.xml" value="0.25" />
+        <entry key="..\:/Cours/2eme annee/AP/Projet Android reservation/2SLAM_2021_P2_EQ5/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Cours/2eme annee/AP/Projet Android reservation/2SLAM_2021_P2_EQ5/app/src/main/res/layout/list_item_layout.xml" value="0.12107396149949341" />
       </map>
     </option>
   </component>
