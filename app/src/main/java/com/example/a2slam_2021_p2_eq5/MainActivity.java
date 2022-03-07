@@ -2,14 +2,10 @@ package com.example.a2slam_2021_p2_eq5;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -31,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //on définit une collection de caractéristiques d'un resto
-        ArrayList<DetailResto> lesRestos = new ArrayList<DetailResto>();
+        ArrayList<Resto> lesRestos = new ArrayList<Resto>();
 
         //on définit un objet ListView
         ListView listViewRestos;
@@ -80,12 +76,12 @@ public class MainActivity extends AppCompatActivity {
                                 // TO DO
                                 Log.i("clients", numcli + " " + nomPrenom + "  " + email + " " + adresse + " " + tel); //message qui apparait dans la console pour vérifier
                                 //TO DO
-                                DetailResto c = new DetailResto(nomPrenom, email, adresse, tel);
+                                Resto c = new Resto(nomPrenom, email, adresse, tel);
                                 //on ajoute le client à la collection lesClients
                                 lesRestos.add(c);
                             }
                             //on affecte cette liste d'objet clients dans la listeview pour l'afficher
-                            ArrayAdapter<DetailResto> dataAdapter = new ArrayAdapter<DetailResto>(MainActivity.this, android.R.layout.simple_list_item_1, lesRestos);
+                            ArrayAdapter<Resto> dataAdapter = new ArrayAdapter<Resto>(MainActivity.this, android.R.layout.simple_list_item_1, lesRestos);
                             listViewRestos.setAdapter(dataAdapter);
 
                         } catch (final JSONException e) {

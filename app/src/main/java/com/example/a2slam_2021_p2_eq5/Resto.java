@@ -3,7 +3,7 @@ package com.example.a2slam_2021_p2_eq5;
 import java.lang.reflect.Array;
 import java.util.Date;
 
-public class DetailResto {
+public class Resto {
     protected int idR;
     protected String nomR;
     protected String numAdr;
@@ -18,9 +18,9 @@ public class DetailResto {
     protected Array lesCritiques;
     protected Array lesTypesCuisineProposes;
 
-    public DetailResto(int idR, String nomR, String numAdr, String voieAdr, String cpR,
-                       String villeR, float latitudeDegR, float longitudeDegR, String descR,
-                       String horairesR, Array lesPhotos, Array lesCritiques, Array lesTypesCuisineProposes){
+    public Resto(int idR, String nomR, String numAdr, String voieAdr, String cpR,
+                 String villeR, float latitudeDegR, float longitudeDegR, String descR,
+                 String horairesR, Array lesPhotos, Array lesCritiques, Array lesTypesCuisineProposes){
 
     this.idR = idR;
     this.nomR = nomR;
