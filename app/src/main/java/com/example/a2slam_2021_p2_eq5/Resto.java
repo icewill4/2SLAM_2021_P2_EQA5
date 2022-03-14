@@ -4,22 +4,22 @@ import java.lang.reflect.Array;
 import java.util.Date;
 
 public class Resto {
-    protected int idR;
+    protected Integer idR;
     protected String nomR;
     protected String numAdr;
     protected String voieAdr;
     protected String cpR;
     protected String villeR;
-    protected float latitudeDegR;
-    protected float longitudeDegR;
+    protected Float latitudeDegR;
+    protected Float longitudeDegR;
     protected String descR;
     protected String horairesR;
     protected Array lesPhotos;
     protected Array lesCritiques;
     protected Array lesTypesCuisineProposes;
 
-    public Resto(int idR, String nomR, String numAdr, String voieAdr, String cpR,
-                 String villeR, float latitudeDegR, float longitudeDegR, String descR,
+    public Resto(Integer idR, String nomR, String numAdr, String voieAdr, String cpR,
+                 String villeR, Float latitudeDegR, Float longitudeDegR, String descR,
                  String horairesR, Array lesPhotos, Array lesCritiques, Array lesTypesCuisineProposes){
 
     this.idR = idR;
@@ -42,7 +42,7 @@ public class Resto {
         return idR;
     }
 
-    public void setIdR(int idR) {
+    public void setIdR(Integer idR) {
         this.idR = idR;
     }
 
@@ -90,7 +90,7 @@ public class Resto {
         return latitudeDegR;
     }
 
-    public void setLatitudeDegR(float latitudeDegR) {
+    public void setLatitudeDegR(Float latitudeDegR) {
         this.latitudeDegR = latitudeDegR;
     }
 
@@ -98,7 +98,7 @@ public class Resto {
         return longitudeDegR;
     }
 
-    public void setLongitudeDegR(float longitudeDegR) {
+    public void setLongitudeDegR(Float longitudeDegR) {
         this.longitudeDegR = longitudeDegR;
     }
 
