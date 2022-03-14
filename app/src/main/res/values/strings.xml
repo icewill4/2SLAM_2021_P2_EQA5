@@ -2,6 +2,7 @@
     <string name="app_name">2SLAM_2021_P2_EQ5</string>
     <string name="textViewNom">textViewNom</string>
     <string name="textViewVille">textViewVille</string>
-    <string name="location_api">/2emeanne/PROJET_2-Application_resto/getAllRestoJSON.php</string>
-    <string name="server">localhost</string>
+    <string name="location_api">TC5/ProjetResto/getAllRestoJSON.php</string>
+    <string name="server">http://192.168.31.230/</string>
+    <string name="textViewNomResto">textViewNomResto </string>
 </resources>

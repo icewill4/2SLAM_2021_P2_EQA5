@@ -12,7 +12,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Objects;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -21,18 +23,18 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
+    //on définit une collection de caractéristiques d'un resto
+    ArrayList<Resto> lesRestos = new ArrayList<Resto>();
+
+    //on définit un objet ListView
+    ListView listViewRestos;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //on définit une collection de caractéristiques d'un resto
-        ArrayList<Resto> lesRestos = new ArrayList<Resto>();
-
-        //on définit un objet ListView
-        ListView listViewRestos;
         //on associe l'objet au widget
-        listViewRestos = findViewById(R.id.listView);
+        listViewRestos = findViewById(R.id.listViewRestos);
 
         //creation de la requete http sur le serveur local, cela necessite
         OkHttpClient httpclient = new OkHttpClient();
@@ -66,17 +68,27 @@ public class MainActivity extends AppCompatActivity {
 
                             //on efface le contenu de la liste
                             lesRestos.clear();
-                            for (int i = 0; i < jsonArray.length(); i++) {
+                            for (int i = 0; i < Objects.requireNonNull(jsonArray).length(); i++) {
                                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-                                Integer numcli = Integer.valueOf(jsonObject.getString("numcli"));
-                                String nomPrenom = jsonObject.getString("nomprenomcli");
-                                String email = jsonObject.getString("email");
-                                String adresse = jsonObject.getString("adressecli");
-                                String tel = jsonObject.getString("telcli");
+                                Integer idR = Integer.valueOf(jsonObject.getString("idR"));
+                                String nomR = jsonObject.getString("nomR");
+                                String numAdr = jsonObject.getString("numAdr");
+                                String voieAdr = jsonObject.getString("voieAdr");
+                                String cpR = jsonObject.getString("cpR");
+                                String villeR = jsonObject.getString("villeR");
+                                String latitudeDegR = jsonObject.getString("latitudeDegR");
+                                String longitudeDeg = jsonObject.getString("longitudeDegR");
+                                String descR = jsonObject.getString("descR");
+                                String horaireR = jsonObject.getString("horaireR");
+                                JSONArray lesPhotos= jsonObject.getJSONArray("lesPhotos");
+                                JSONArray lesCritiques= jsonObject.getJSONArray("lesCritiques");
+                                JSONArray lesTypesCuisineProposes= jsonObject.getJSONArray("lesTypesCuisineProposes");
+
+
                                 // TO DO
-                                Log.i("clients", numcli + " " + nomPrenom + "  " + email + " " + adresse + " " + tel); //message qui apparait dans la console pour vérifier
-                                //TO DO
-                                Resto c = new Resto(nomPrenom, email, adresse, tel);
+                                Log.i("clients", idR+ " " + nomR + "  " + numAdr + " " + voieAdr + " " + cpR+" "+villeR+" "+latitudeDegR+" "+longitudeDeg+" "+descR+" "+horaireR+" "+lesPhotos+" "+lesCritiques+" "+lesTypesCuisineProposes+" "); //message qui apparait dans la console pour vérifier
+                                // TO DO
+                                Resto c = new Resto(nomR, numAdr, voieAdr, cpR, villeR, latitudeDegR, longitudeDeg, descR, horaireR, lesPhotos, lesCritiques, lesTypesCuisineProposes);
                                 //on ajoute le client à la collection lesClients
                                 lesRestos.add(c);
                             }
@@ -111,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
 //                intent.putExtra("IDCLI", id);
 //                startActivity(intent);
 //            }
-        });
+//        });
     }
 
 }

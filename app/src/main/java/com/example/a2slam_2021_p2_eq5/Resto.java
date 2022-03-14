@@ -1,50 +1,43 @@
 package com.example.a2slam_2021_p2_eq5;
 
+import org.json.JSONArray;
+
 import java.lang.reflect.Array;
-import java.util.Date;
 
 public class Resto {
-    protected int idR;
     protected String nomR;
     protected String numAdr;
     protected String voieAdr;
     protected String cpR;
     protected String villeR;
-    protected float latitudeDegR;
-    protected float longitudeDegR;
+    protected String latitudeDegR;
+    protected String longitudeDegR;
     protected String descR;
     protected String horairesR;
-    protected Array lesPhotos;
-    protected Array lesCritiques;
-    protected Array lesTypesCuisineProposes;
+    protected JSONArray lesPhotos;
+    protected JSONArray lesCritiques;
+    protected JSONArray lesTypesCuisineProposes;
 
-    public Resto(int idR, String nomR, String numAdr, String voieAdr, String cpR,
-                 String villeR, float latitudeDegR, float longitudeDegR, String descR,
-                 String horairesR, Array lesPhotos, Array lesCritiques, Array lesTypesCuisineProposes){
+    public Resto(String nomR, String numAdr, String voieAdr, String cpR,
+                 String villeR, String latitudeDegR, String longitudeDegR, String descR,
+                 String horairesR, JSONArray lesPhotos, JSONArray lesCritiques, JSONArray lesTypesCuisineProposes) {
 
-    this.idR = idR;
-    this.nomR = nomR;
-    this.numAdr = numAdr;
-    this.voieAdr = voieAdr;
-    this.cpR = cpR;
-    this.villeR = villeR;
-    this.latitudeDegR = latitudeDegR;
-    this.longitudeDegR = longitudeDegR;
-    this.descR = descR;
-    this.horairesR = horairesR;
-    this.lesPhotos = lesPhotos;
-    this.lesCritiques = lesCritiques;
-    this.lesTypesCuisineProposes = lesTypesCuisineProposes;
+        this.nomR = nomR;
+        this.numAdr = numAdr;
+        this.voieAdr = voieAdr;
+        this.cpR = cpR;
+        this.villeR = villeR;
+        this.latitudeDegR = latitudeDegR;
+        this.longitudeDegR = longitudeDegR;
+        this.descR = descR;
+        this.horairesR = horairesR;
+        this.lesPhotos = lesPhotos;
+        this.lesCritiques = lesCritiques;
+        this.lesTypesCuisineProposes = lesTypesCuisineProposes;
 
     }
 
-    public int getIdR() {
-        return idR;
-    }
 
-    public void setIdR(int idR) {
-        this.idR = idR;
-    }
 
     public String getNomR() {
         return nomR;
@@ -86,19 +79,19 @@ public class Resto {
         this.villeR = villeR;
     }
 
-    public float getLatitudeDegR() {
+    public String getLatitudeDegR() {
         return latitudeDegR;
     }
 
-    public void setLatitudeDegR(float latitudeDegR) {
+    public void setLatitudeDegR(String latitudeDegR) {
         this.latitudeDegR = latitudeDegR;
     }
 
-    public float getLongitudeDegR() {
+    public String getLongitudeDegR() {
         return longitudeDegR;
     }
 
-    public void setLongitudeDegR(float longitudeDegR) {
+    public void setLongitudeDegR(String longitudeDegR) {
         this.longitudeDegR = longitudeDegR;
     }
 
@@ -118,27 +111,27 @@ public class Resto {
         this.horairesR = horairesR;
     }
 
-    public Array getLesPhotos() {
+    public JSONArray getLesPhotos() {
         return lesPhotos;
     }
 
-    public void setLesPhotos(Array lesPhotos) {
+    public void setLesPhotos(JSONArray lesPhotos) {
         this.lesPhotos = lesPhotos;
     }
 
-    public Array getLesCritiques() {
+    public JSONArray getLesCritiques() {
         return lesCritiques;
     }
 
-    public void setLesCritiques(Array lesCritiques) {
+    public void setLesCritiques(JSONArray lesCritiques) {
         this.lesCritiques = lesCritiques;
     }
 
-    public Array getLesTypesCuisineProposes() {
+    public JSONArray getLesTypesCuisineProposes() {
         return lesTypesCuisineProposes;
     }
 
-    public void setLesTypesCuisineProposes(Array lesTypesCuisineProposes) {
+    public void setLesTypesCuisineProposes(JSONArray lesTypesCuisineProposes) {
         this.lesTypesCuisineProposes = lesTypesCuisineProposes;
     }
 }
