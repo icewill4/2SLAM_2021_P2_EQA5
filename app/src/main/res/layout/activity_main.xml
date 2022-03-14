@@ -20,14 +20,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/textViewNomResto" />
+            android:text="NomResto" />
 
         <TextView
             android:id="@+id/textView_NomDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/textViewVille"/>
+            android:text="Ville"/>
 
 
     </LinearLayout>

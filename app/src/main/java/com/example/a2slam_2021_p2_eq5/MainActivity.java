@@ -70,25 +70,15 @@ public class MainActivity extends AppCompatActivity {
                             lesRestos.clear();
                             for (int i = 0; i < Objects.requireNonNull(jsonArray).length(); i++) {
                                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-                                Integer idR = Integer.valueOf(jsonObject.getString("idR"));
                                 String nomR = jsonObject.getString("nomR");
-                                String numAdr = jsonObject.getString("numAdr");
-                                String voieAdr = jsonObject.getString("voieAdr");
-                                String cpR = jsonObject.getString("cpR");
                                 String villeR = jsonObject.getString("villeR");
-                                String latitudeDegR = jsonObject.getString("latitudeDegR");
-                                String longitudeDeg = jsonObject.getString("longitudeDegR");
-                                String descR = jsonObject.getString("descR");
-                                String horaireR = jsonObject.getString("horaireR");
-                                JSONArray lesPhotos= jsonObject.getJSONArray("lesPhotos");
-                                JSONArray lesCritiques= jsonObject.getJSONArray("lesCritiques");
-                                JSONArray lesTypesCuisineProposes= jsonObject.getJSONArray("lesTypesCuisineProposes");
+
 
 
                                 // TO DO
-                                Log.i("clients", idR+ " " + nomR + "  " + numAdr + " " + voieAdr + " " + cpR+" "+villeR+" "+latitudeDegR+" "+longitudeDeg+" "+descR+" "+horaireR+" "+lesPhotos+" "+lesCritiques+" "+lesTypesCuisineProposes+" "); //message qui apparait dans la console pour vérifier
+                                Log.i("clients", nomR + " "+villeR+" "); //message qui apparait dans la console pour vérifier
                                 // TO DO
-                                Resto c = new Resto(nomR, numAdr, voieAdr, cpR, villeR, latitudeDegR, longitudeDeg, descR, horaireR, lesPhotos, lesCritiques, lesTypesCuisineProposes);
+                                Resto c = new Resto(nomR, villeR);
                                 //on ajoute le client à la collection lesClients
                                 lesRestos.add(c);
                             }
@@ -96,11 +86,13 @@ public class MainActivity extends AppCompatActivity {
                             ArrayAdapter<Resto> dataAdapter = new ArrayAdapter<Resto>(MainActivity.this, android.R.layout.simple_list_item_1, lesRestos);
                             listViewRestos.setAdapter(dataAdapter);
 
+
+
                         } catch (final JSONException e) {
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    Log.i("erreur2", "erreur ligne 89");
+                                    Log.e("erreur", "Exceptions " + String.valueOf(e));
                                 }
                             });
                         }
