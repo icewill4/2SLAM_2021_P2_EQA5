@@ -17,9 +17,7 @@ public class Resto {
 
     @Override
     public String toString() {
-        return nomR + '\'' +" "+
-                 villeR + '\''
-                ;
+        return nomR  +"                           "+ villeR;
     }
 
     public String getNomR() {
