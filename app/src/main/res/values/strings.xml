@@ -5,4 +5,12 @@
     <string name="location_api">TC5/ProjetResto/getAllRestoJSON.php</string>
     <string name="server">http://192.168.31.230/</string>
     <string name="textViewNomResto">textViewNomResto </string>
+    <string name="Nom">Nom</string>
+    <string name="textPrenom">Prenom</string>
+    <string name="textHoraire">Horaire</string>
+    <string name="Nbpersonnes">Nbpersonnes</string>
+    <string name="btnEnregistrerReservation">btnEnregistrerReservation</string>
+    <string name="btnQuitterReservation">btnQuitterReservation</string>
+    <string name="titreNewReservation">NewReservation</string>
+    <string name="editTextPhone">editTextPhone</string>
 </resources>
