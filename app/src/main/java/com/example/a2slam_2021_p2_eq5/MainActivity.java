@@ -110,16 +110,19 @@ public class MainActivity extends AppCompatActivity {
 
         // on sélectionne un client de la liste et l'on passe son id à l'activity AfficheUnClient
 
-        listViewRestos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-
-                Toast.makeText(getApplicationContext(), "id selectionné : " + String.valueOf(id), Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(MainActivity.this, NewReservationActivity.class);
-                intent.putExtra("IDResto", id);
-                startActivity(intent);
-            }
-        });
+//        listViewRestos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//
+//            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+//
+//                Toast.makeText(getApplicationContext(), "id selectionné : " + String.valueOf(id), Toast.LENGTH_LONG).show();
+//                Intent intent = new Intent(MainActivity.this, NewReservationActivity.class);
+//                intent.putExtra("IDResto", id);
+//
+//                Toast.makeText(getApplicationContext(), "resto :" + id, Toast.LENGTH_LONG).show();
+//
+//                startActivity(intent);
+//            }
+//        });
     }
 
 }

@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/2SLAM_2021_P2_EQ5/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1615" />
+        <entry key="..\:/2SLAM_2021_P2_EQ5/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1615" />
         <entry key="..\:/2SLAM_2021_P2_EQ5/app/src/main/res/layout/activity_detailresto.xml" value="0.1621376811594203" />
         <entry key="..\:/2SLAM_2021_P2_EQ5/app/src/main/res/layout/activity_listeresto.xml" value="0.1621376811594203" />
         <entry key="..\:/2SLAM_2021_P2_EQ5/app/src/main/res/layout/activity_main.xml" value="0.264" />

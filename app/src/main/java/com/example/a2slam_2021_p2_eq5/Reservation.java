@@ -21,6 +21,9 @@ public class Reservation {
 
     }
 
+    public Reservation(String toString, String toString1, String nom, String prenom, String tel) {
+    }
+
 
     public int getId_res() {
         return id_res;

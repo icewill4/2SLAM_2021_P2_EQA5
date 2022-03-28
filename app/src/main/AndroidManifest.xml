@@ -23,6 +23,7 @@
         </activity>
         <activity android:name="DetailResto"></activity>
         <activity android:name="ListeResto"></activity>
+        <activity android:name="NewReservationActivity"></activity>
     </application>
 
 </manifest>
