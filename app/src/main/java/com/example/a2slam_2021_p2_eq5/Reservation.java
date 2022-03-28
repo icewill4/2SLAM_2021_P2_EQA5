@@ -1,14 +1,16 @@
 package com.example.a2slam_2021_p2_eq5;
 
+import java.util.Date;
+
 public class Reservation {
     protected int id_res;
     protected int id_resto;
     protected String nom;
     protected String prenom;
     protected String tel;
-    protected String horaire;
+    protected Date horaire;
     protected int nbpersonne;
-    public Reservation(int id_res, int id_resto, String nom, String prenom, String tel,String horaire, int nbpersonne ) {
+    public Reservation(int id_res, int id_resto, String nom, String prenom, String tel, Date horaire, int nbpersonne ) {
         this.id_res = id_res;
         this.id_resto = id_resto;
         this.nom =nom;
@@ -60,11 +62,9 @@ public class Reservation {
         this.tel = tel;
     }
 
-    public String getHoraire() {
-        return horaire;
-    }
+    public Date getHoraire() { return horaire; }
 
-    public void setHoraire(String horaire) {
+    public void setHoraire(Date horaire) {
         this.horaire = horaire;
     }
 

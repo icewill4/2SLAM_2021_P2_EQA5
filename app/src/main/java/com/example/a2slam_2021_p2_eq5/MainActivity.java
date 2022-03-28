@@ -2,10 +2,14 @@ package com.example.a2slam_2021_p2_eq5;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -104,18 +108,18 @@ public class MainActivity extends AppCompatActivity {
             ;
         });
 
-        //on sélectionne un client de la liste et l'on passe son id à l'activity AfficheUnClient
+        // on sélectionne un client de la liste et l'on passe son id à l'activity AfficheUnClient
 
-//        listViewRestos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listViewRestos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-//            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-//
-//                Toast.makeText(getApplicationContext(), "id selectionné : " + String.valueOf(id), Toast.LENGTH_LONG).show();
-//                Intent intent = new Intent(MainActivity.this, AfficheUnRestoActivity.class);
-//                intent.putExtra("IDCLI", id);
-//                startActivity(intent);
-//            }
-//        });
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+
+                Toast.makeText(getApplicationContext(), "id selectionné : " + String.valueOf(id), Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this, NewReservationActivity.class);
+                intent.putExtra("IDResto", id);
+                startActivity(intent);
+            }
+        });
     }
 
 }
